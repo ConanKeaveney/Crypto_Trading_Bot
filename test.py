@@ -47,7 +47,7 @@ def main(argv):
 
 
 
-    conn = poloniex('ZPJCGM29-U7HP3Z8Z-EXQYF4GE-W9SBKULA','    71396818501f4b3434e53ecb33ee85f5f0e5da2d7a2f375b8b9aa3df43bef92897a3f5eaac7584f1352a6a799f048df9f62e97b953fce0a12d5fbe6cd657d1ab')
+    conn = poloniex('x','y')
 
     output = open("output.html",'w')
     output.truncate()
