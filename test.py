@@ -4,21 +4,22 @@ import datetime
 from poloniex import poloniex
 
 def main(argv):
-    period = 10
-    pair = "BTC_XMR"
-    prices = []
-    currentMovingAverage = 0;
-    lengthOfMA = 0
-    startTime = False
-    endTime = False
-    historicalData = False
-    tradePlaced = False
-    typeOfTrade = False
-    dataDate = ""
-    orderNumber = ""
-    dataPoints = []
-    localMax = []
-    currentResistance = 0.018
+#change bot run time, trade type etc...
+#     period = 10
+#     pair = "BTC_XMR"
+#     prices = []
+#     currentMovingAverage = 0;
+#     lengthOfMA = 0
+#     startTime = False
+#     endTime = False
+#     historicalData = False
+#     tradePlaced = False
+#     typeOfTrade = False
+#     dataDate = ""
+#     orderNumber = ""
+#     dataPoints = []
+#     localMax = []
+#     currentResistance = 0.018
 
     try:
         opts, args = getopt.getopt(argv,"hp:c:n:s:e:",["period=","currency=","points="])
