@@ -23,7 +23,7 @@ def main(argv):
 			print ('trading-bot.py -p <period length> -c <currency pair> -n <period of moving average>')
 			sys.exit()
 		elif opt in ("-p", "--period"):
-			if (int(arg) in [300,900,1800,7200,14400,86400]):
+			if (int(arg) in [300,900,1800,7200,14400,86400]):#change trade period
 				period = arg
 			else:
 				print ('Poloniex requires periods in 300,900,1800,7200,14400, or 86400 second increments')
@@ -38,7 +38,8 @@ def main(argv):
 			endTime = arg
 
 	if (startTime):
-		chart = BotChart("poloniex","BTC_XMR",300)
+		#change exchange and currency
+		#chart = BotChart("poloniex","BTC_XMR",300)
 
 		strategy = BotStrategy()
 
@@ -46,7 +47,7 @@ def main(argv):
 			strategy.tick(candlestick)
 
 	else:
-		chart = BotChart("poloniex","BTC_XMR",300,False)
+		#chart = BotChart("poloniex","BTC_XMR",300,False)
 		
 		strategy = BotStrategy()
 
