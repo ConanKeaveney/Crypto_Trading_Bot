@@ -1,6 +1,5 @@
 import sys, getopt
 import time
-import urllib.error
 
 from botchart import BotChart
 from botstrategy import BotStrategy
@@ -18,7 +17,7 @@ def main(argv):
 	while True:
 		try:
 			developingCandlestick.tick(chart.getCurrentPrice())
-		except urllib.error.URLError:
+		except urllib2.URLError:
 			time.sleep(int(30))
 			developingCandlestick.tick(chart.getCurrentPrice())
 

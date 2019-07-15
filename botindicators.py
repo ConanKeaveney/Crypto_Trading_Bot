@@ -7,6 +7,7 @@ class BotIndicators(object):
 	def movingAverage(self, dataPoints, period):
 		if (len(dataPoints) > 1):
 			return sum(dataPoints[-period:]) / float(len(dataPoints[-period:]))
+		return 0
 
 	def momentum (self, dataPoints, period=14):
 		if (len(dataPoints) > period -1):
@@ -35,7 +36,7 @@ class BotIndicators(object):
 		rs = up/down
 		rsi = np.zeros_like(prices)
 		rsi[:period] = 100. - 100./(1. + rs)
-		
+
 		for i in range(period, len(prices)):
 			delta = deltas[i - 1]  # cause the diff is 1 shorter
 			if delta > 0:
@@ -44,7 +45,7 @@ class BotIndicators(object):
 			else:
 				upval = 0.
 				downval = -delta
-		
+
 			up = (up*(period - 1) + upval)/period
 			down = (down*(period - 1) + downval)/period
 			rs = up/down

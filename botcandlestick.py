@@ -1,16 +1,10 @@
 import sys, getopt
 import time
 
-from botlog import BotLog
+from cryptotrading.src.Crypto_Trading_Bot_py3.botlog import BotLog
 
 class BotCandlestick(object):
-	def __init__(self
-		     , period=#300
-		     ,open=None
-		     ,close=None
-		     ,high=None
-		     ,low=None
-		     ,priceAverage=None):
+	def __init__(self, period=300,open=None,close=None,high=None,low=None,priceAverage=None):
 		self.current = None
 		self.open = open
 		self.close = close
